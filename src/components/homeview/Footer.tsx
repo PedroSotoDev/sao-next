@@ -14,7 +14,7 @@ function Footer() {
     return ( 
         <footer className={styles.footer}>
 
-            <p className={styles.tittle}>Contactanos</p>
+            <Image className="w-20 ml-4" src="/icon/logo.png" alt="Logo" width={400} height={400} priority={false} />
 
             <div className={styles.wrapper}>
                 <Image 
@@ -37,13 +37,13 @@ function Footer() {
                     height={400}
                     priority={false}
                 />
-                <p className={styles.text}>eventossao@gmail.com</p>
+                <p className={styles.text}>eo@gmail.com</p>
             </div>
 
-            <div className={styles.socialMedia}>
+            <div className="w-full h-20 flex flex-row justify-center items-center">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                     <Image 
-                        className={styles.icon} 
+                        className="w-8 mx-6" 
                         src="/icon/mail.png"
                         alt="Logo" 
                         width={400} 
@@ -53,7 +53,7 @@ function Footer() {
                 </a>
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                     <Image 
-                        className={styles.icon} 
+                        className="w-8 mx-6" 
                         src="/icon/mail.png"
                         alt="Logo" 
                         width={400} 
@@ -63,7 +63,7 @@ function Footer() {
                 </a>
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                     <Image 
-                        className={styles.icon} 
+                        className="w-8 mx-6" 
                         src="/icon/mail.png"
                         alt="Logo" 
                         width={400} 
@@ -71,7 +71,11 @@ function Footer() {
                         priority={false}
                     />
                 </a>
+
             </div>
+
+            <p>©2026 <span className="font-semibold">Eventos Sao</span> | Todos los derechos reservados</p>
+
         </footer>
      );
 }

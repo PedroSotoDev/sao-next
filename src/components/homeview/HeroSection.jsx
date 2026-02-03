@@ -1,82 +1,29 @@
 import Image from "next/image";
-import Polaroid from "./Polaroid";
+
 
 const styles={
-    header: "w-full h-100 mt-14 relative flex flex-col items-center justify-between bg-cover bg-center bg-no-repeat sm:min-h-screen",
-    logoWrapper: "w-50 h-auto flex flex-col justify-center items-center text-[rgb(255,220,0)] text-shadow-sm text-md font-bold",
-    logo: "w-full h-auto brightness-160",
-    btn: "relative z-5 bg-pink-600 hover:bg-pink-500 text-white font-semibold px-4 py-2 mt-8 rounded-full shadow-md transition-all duration-300 text-lg",
-    waveTop: "w-full h-24 rotate-180",
-    waveBottom: "w-full h-24",
+    header: "w-full h-[90vh] relative flex flex-col items-center justify-between text-white bg-white bg-cover bg-center bg-no-repeat text-black sm:h-[90vh]",
+    icon: "w-40",
 
 }
 
 export default function HeroSection() {
 
     return (
-        <header className={styles.header} style={{backgroundImage: "url('/images/playa.jpg')"}}>
-            
-                <svg 
-                    viewBox="0 0 1200 120" 
-                    preserveAspectRatio="none"
-                    className={styles.waveTop}
-                > 
-                    <path 
-                    d="M0,60 C150,30 350,90 500,50 C650,10 850,70 1200,30 L1200,120 L0,120 Z" 
-                    className="opacity-50"
-                    fill="rgb(250,250,250)"
-                    ></path>
-
-                    <path 
-                    d="M0,80 C200,60 400,100 600,70 C800,40 1000,80 1200,60 L1200,120 L0,120 Z" 
-                    className="opacity-60"
-                    fill="rgb(250,250,250)"
-                    ></path>
-
-                    <path 
-                    d="M0,90 C300,70 600,110 1200,90 L1200,120 L0,120 Z" 
-                    fill="rgb(250,250,250)"
-                    ></path>
-                </svg>
-
-                <div className={styles.logoWrapper}>
-                    <Image 
-                        className={styles.logo} 
-                        src="/icon/logo.png"
-                        alt="Logo" 
-                        width={400} 
-                        height={400}
-                        priority={false}
-                    />
+        <header className={styles.header} style={{backgroundImage: "url('/images/beach.jpg')"}}>
+            <div className="w-full h-full backdrop-brightness-43 flex flex-col items-center justify-center">
+                
+                <div className="w-full pt-12 px-6 mb-24 flex flex-col items-start justify-left">   
+                    <h1 className="w-full mt-4 text-[2.6rem] font-semibold text-shadow-[0rem_0rem_1rem_rgba(0,0,0,1)] sm:text-6xl" style={{fontFamily:  "playfair"}}>Organización y Decoración de Eventos y Bodas en Cuba</h1>
                 </div>
 
-                <button className={styles.btn} type="button">
-                    Planear tu Evento
-                </button>
-
-                <svg 
-                    viewBox="0 0 1200 120" 
-                    preserveAspectRatio="none"
-                    className={styles.waveBottom}
-                > 
-                    <path 
-                    d="M0,60 C150,30 350,90 500,50 C650,10 850,70 1200,30 L1200,120 L0,120 Z" 
-                    className="opacity-50"
-                    fill="rgb(250,250,250)"
-                    ></path>
-
-                    <path 
-                    d="M0,80 C200,60 400,100 600,70 C800,40 1000,80 1200,60 L1200,120 L0,120 Z" 
-                    className="opacity-60"
-                    fill="rgb(250,250,250)"
-                    ></path>
-
-                    <path 
-                    d="M0,90 C300,70 600,110 1200,90 L1200,120 L0,120 Z" 
-                    fill="rgb(250,250,250)"
-                    ></path>
-                </svg>
-            
+                {/* <div className="w-full pb-14 px-6 flex flex-col justify-center items-center" >
+                    
+                        <p className="text-2xl mx-8  font-medium text-center text-shadow-[0rem_0rem_1rem_rgba(0,0,0,1)]" style={{fontFamily:  "playfair"}}>¿No sabes por donde empezar?</p>
+                        <button style={{fontFamily:  "playfair"}} className="min-h-16 text-2xl mt-12 mb-12 px-4  border-3 shadow-2xl text-center text-white text-shadow-[0rem_0rem_1rem_rgba(0,0,0,1)] sm:text-3xl" type="button">Planemos Juntos</button>
+                   
+                </div>  */}
+            </div>   
         </header>
     );
 }

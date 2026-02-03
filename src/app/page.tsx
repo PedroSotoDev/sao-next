@@ -15,8 +15,6 @@ export default function Home() {
 		<main className={styles.main}>
 			 <HeroSection/>
 			 <About/>
-			 <Servicios/>
-			 <Form/>
 			 <Footer/>
 		</main>
 	);
