@@ -6,7 +6,7 @@ export default function Navbar() {
   	const [open, setOpen] = useState(false);
 
   	return (
-    	<nav className="relative w-full h-18 flex items-center justify-between px-4 bg-white shadow">
+    	<nav className="fixed z-100 w-full h-18 flex items-center justify-between px-4 bg-white shadow">
 
             <div className="flex items-center justify-center">
                 <button onClick={() => setOpen(!open)} className="focus:outline-none">
