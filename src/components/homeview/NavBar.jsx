@@ -37,9 +37,11 @@ export default function Navbar() {
                 `}
             >
                 <div className="px-8 py-4 h-full w-[85%] flex flex-col items-start bg-white text-xl">
-                    <a className="font-semibold text-[rgb(255,0,76)]">Inicio</a>
-                    <a>Galería</a>
-                    <a>Contacto</a>   
+                    <a href='/' className="font-semibold text-[rgb(255,0,76)]">Inicio</a>
+                    <a href='/contact'>Servicios de Quince</a>
+                    <a href='/contact'>Servicios de Bodas</a>
+                    <a href='/contact'>Contacto</a>
+                    <a href='/contact'>Sobre Nosotros</a>   
                     <br/>
                     <p>©2026 <span className="font-semibold">Eventos Sao</span> | Todos los derechos reservados</p>
                 </div>
