@@ -6,7 +6,7 @@ const styles={
 
 }
 
-export default function HeroSection() {
+export default function MainHero() {
 
     return (
         <header className={styles.header}>
@@ -22,7 +22,7 @@ export default function HeroSection() {
 
             <div className="absolute inset-0 bg-[#0000009c] not-visited:w-full h-full flex flex-col items-center justify-center">       
                 <h1 className="w-full mt-4 px-4 text-[2.4rem] font-semibold text-shadow-[0rem_0rem_1rem_rgba(0,0,0,1)] sm:text-6xl" style={{fontFamily:  "playfair"}}>
-                    Organización y Decoración de Eventos y Bodas en Cuba
+                    Organización y Decoración de <spam className="text-rose-400">Eventos</spam> y Bodas en Cuba
                 </h1>
             </div>   
         </header>

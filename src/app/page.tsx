@@ -1,7 +1,7 @@
-import HeroSection from "../components/homeview/HeroSection"
-import About from "@/components/homeview/About";
-import Footer from "@/components/homeview/Footer";
-import CardSecction from "@/components/homeview/CardSecction";
+import MainHero from "../components/MainHero"
+import About from "@/components/StepLine"
+import Footer from "@/components/Footer"
+import CardSecction from "@/components/Cards"
 
 const styles={
 	main:"h-full w-full flex flex-col items-center justify-between bg-white",
@@ -11,7 +11,7 @@ const styles={
 export default function Home() {
 	return (
 		<main className={styles.main}>
-			 <HeroSection/>
+			 <MainHero/>
 			 <CardSecction/>
 			 <About/>
 			 <Footer/>

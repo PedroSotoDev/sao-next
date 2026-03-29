@@ -18,7 +18,7 @@ export default function Slider() {
 
     return (
 
-        <section className="w-full px-4 my-12 flex flex-col items-center">
+        <section className="w-full px-4 my-6 flex flex-col items-center">
 
             <div className="relative w-full h-[350px] overflow-hidden rounded-xl shadow-lg">
 

@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-export default function CardSecction() {
+export default function Cards() {
     return (
         <section className="bg-white w-full px-4 pt-12 pb-12 flex flex-wrap gap-6 justify-center">
 
-            <div className="relative w-full h-64 sm:w-[48%] lg:w-[30%] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition bg-cover bg-center">
+            <a href='/boda' className="relative w-full h-64 sm:w-[48%] lg:w-[30%] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition bg-cover bg-center">
                 
                 <Image
                         className="z-0 object-cover brightness-90" 
@@ -16,13 +16,13 @@ export default function CardSecction() {
                 />
 
                 <div className="absolute w-full h-full p-8 text-white inset-0 bg-[#0000009c]">
-                    <h3 className="text-3xl text-[rgb(255,123,185)] font-semibold mb-4">Decoración y Vestuario</h3>
-                    <p className="text-xl leading-relaxed">Nos encargamos de la decoración temática y la selección de vestuario.</p>
+                    <h3 className="text-3xl text-[rgb(255,123,185)] font-semibold text-shadow mb-4">Planes de Boda</h3>
+                    <p className="text-xl leading-relaxed text-shadow">Nuestros plaquetes cubren cada detalle de la planificación.</p>
                 </div>
 
-            </div>
+            </a>
 
-            <div className="relative w-full h-64 sm:w-[48%] lg:w-[30%] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition bg-cover bg-center">
+            <a href='/quince' className="relative w-full h-64 sm:w-[48%] lg:w-[30%] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition bg-cover bg-center">
                 
                 <Image
                         className="z-0 object-cover brightness-90" 
@@ -34,13 +34,14 @@ export default function CardSecction() {
                 />
 
                 <div className="absolute w-full h-full p-8 text-white inset-0 bg-[#0000009c]">
-                    <h3 className="text-3xl text-[rgb(255,123,185)] font-semibold text-shadow mb-4">Gestión de Bodas</h3>
-                    <p className="text-xl leading-relaxed text-shadow">Nuestro plan ntegral de bodas cubre cada detalle de planificación.</p>
+                    <h3 className="text-3xl text-[rgb(255,123,185)] font-semibold mb-4">Fiesta de Quince</h3>
+                    <p className="text-xl leading-relaxed">Nos encargamos de la decoración y el vestuario.</p>
                 </div>
 
-            </div>
+            </a>
 
-            <div className="relative w-full h-64 sm:w-[48%] lg:w-[30%] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition bg-cover bg-center">
+
+            <a href='/infantil' className="relative w-full h-64 sm:w-[48%] lg:w-[30%] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition bg-cover bg-center">
                 
                 <Image
                         className="z-0 object-cover brightness-90" 
@@ -52,11 +53,11 @@ export default function CardSecction() {
                 />
 
                 <div className="absolute w-full h-full p-8 text-white inset-0 bg-[#0000009c]">
-                    <h3 className="text-3xl text-[rgb(255,123,185)] font-semibold text-shadow mb-4">Lugares Exclusivos</h3>
+                    <h3 className="text-3xl text-[rgb(255,123,185)] font-semibold text-shadow mb-4">Fiesta Infantil</h3>
                     <p className="text-xl leading-relaxed text-shadow">Contamos con una selección exclusiva de lugares únicos.</p>
                 </div>
 
-            </div>
+            </a>
 
     </section>
 

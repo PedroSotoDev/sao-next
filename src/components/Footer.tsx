@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const styles={
-	footer:"w-full px-10 py-4 flex flex-col items-center justify-around bg-[rgb(250,150,130)] text-center text-black",
+	footer:"w-full px-10 py-4 flex flex-col items-center justify-around bg-rose-500 text-center text-black",
     tittle: "text-2xl font-bold mb-6",
     wrapper: "w-full mb-4 flex flex-row justify-left items-center text-center text-lg",
     icon: "w-8 mr-8",

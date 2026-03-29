@@ -22,7 +22,7 @@ export default function Navbar() {
                 <Image className="w-20 ml-4" src="/icon/logo.png" alt="Logo" width={400} height={400} priority={false} />
             </div>
 
-            <div className="h-9 w-27 bg-gradient-to-r rounded from-[rgb(255,0,76)] via-[rgb(255,174,0)] to-[rgb(255,136,0)] flex items-center justify-center">
+            <div className="h-9 w-27 bg-gradient-to-r rounded from-rose-500 via-[rgb(255,174,0)] to-[rgb(255,136,0)] flex items-center justify-center">
                 <button className="h-8 w-26 text-xs rounded font-semibold shadow-[0px_0px_15px_0px_rgb(255,0,76)] text-center text-white bg-[rgb(39,0,12)]" type="button">
                         Planea ahora
                 </button>
@@ -36,16 +36,21 @@ export default function Navbar() {
                     }
                 `}
             >
-                <div className="px-8 py-4 h-full w-[85%] flex flex-col items-start bg-white text-xl">
-                    <a href='/' className="font-semibold text-[rgb(255,0,76)]">Inicio</a>
-                    <a href='/contact'>Servicios de Quince</a>
-                    <a href='/contact'>Servicios de Bodas</a>
-                    <a href='/contact'>Contacto</a>
-                    <a href='/contact'>Sobre Nosotros</a>   
-                    <br/>
-                    <p>©2026 <span className="font-semibold">Eventos Sao</span> | Todos los derechos reservados</p>
-                </div>
+                <div className="px-8 py-4 pb-30 h-[100%] w-[85%]  flex flex-col justify-between items-start bg-white text-xl">
+                    <div className='flex flex-col items-start'>
+                        <a href='/' className="font-semibold text-[rgb(255,0,76)]">Inicio</a>
+                        <br/>
+                        <a href='/boda'>Planes de Boda</a>
+                        <a href='/quince'>Fiesta de Quince</a>
+                        <a href='/infantil'>Fiesta Infantil</a>
+                        <br/>
+                        <a href='/servicios'>Servicios</a>
+                        <a href='/contact'>Contacto</a>
+                        <a href='/nosotros'>Sobre Nosotros</a>   
+                    </div>
 
+                    <p className="text-sm">©2026 <span className="font-semibold">Eventos Sao</span> | Todos los derechos reservados</p>
+                </div>
             </div>
         </nav>
   );
