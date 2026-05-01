@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "../components/NavBar"
-
+import Image from "next/image";
 
 export const metadata: Metadata = {
 	title: "Eventos Sao | Organizadores de Bodas y Fiestas en Cuba",
@@ -16,8 +16,15 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
 		<body className={bodyStyles}>
 			<NavBar/>
 			
-			<button className="fixed z-100 w-12 h-12 bottom-4 right-4 text-white rounded-[5rem] bg-[#25d366]">
-				W
+			<button className="fixed z-100 w-14 h-14 bottom-4 right-4 text-white rounded-[5rem] bg-[#25d366]">
+				<Image
+					className="z-0 object-cover opacity-90 scale-75" 
+					src="/icon/whatsapp.png"
+					alt="Foto de Evento" 
+					width={800} 
+					height={600}
+					priority={false}
+				/>
 			</button>
 			
 			{children}

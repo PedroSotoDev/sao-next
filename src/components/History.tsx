@@ -8,9 +8,9 @@ interface HistoryProps {
 
 export default function History({ title, text, img }: HistoryProps) {
     return (
-        <section className="w-full max-w-5xl mx-auto px-5 py-10 text-black">
+        <section className="w-full max-w-5xl mx-auto px-5 mt-12 mb-6 text-black">
 
-            <h4 className="text-3xl font-semibold tracking-wide mb-6 text-left">
+            <h4 className="text-3xl font-semibold tracking-wide mb-5 text-left">
                 Historias recientes
             </h4>
 
@@ -24,10 +24,10 @@ export default function History({ title, text, img }: HistoryProps) {
             </div>
 
             <div className="flex flex-col items-start">
-                <p className="text-2xl md:text-3xl font-semibold mb-4">
+                <p className="text-2xl md:text-3xl font-semibold mb-2">
                     {title}
                 </p>
-                <p className="text-xl leading-relaxed text-black">
+                <p className="text-xl leading-relaxed text-gray-800">
                     {text}
                 </p>
             </div>

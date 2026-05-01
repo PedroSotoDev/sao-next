@@ -1,83 +1,88 @@
 import Image from "next/image";
 
-const styles={
-	footer:"w-full px-10 py-4 flex flex-col items-center justify-around bg-rose-500 text-center text-black",
-    tittle: "text-2xl font-bold mb-6",
-    wrapper: "w-full mb-4 flex flex-row justify-left items-center text-center text-lg",
-    icon: "w-8 mr-8",
-    socialMedia: "w-full h-20 mt-6 flex flex-row justify-center items-center",
-    text: "text-black",
+const styles = {
+  footer:
+    "w-full px-6 py-10 flex flex-col items-center gap-6 bg-gradient-to-t from-rose-100 to-white text-gray-700",
 
-}
+  logo: "w-18 opacity-90",
+
+  nav:
+    "flex flex-row flex-wrap justify-center items-center gap-6 text-sm font-medium",
+
+  link:
+    "hover:text-rose-500 transition-colors duration-300",
+
+  socialMedia:
+    "flex flex-row justify-center items-center gap-6 mt-2",
+
+  icon:
+    "w-6 opacity-70 hover:opacity-100 hover:scale-110 transition-all duration-300",
+
+  copy:
+    "text-xs text-gray-500 mt-4 text-center",
+};
 
 function Footer() {
-    return ( 
-        <footer className={styles.footer}>
+  return (
+    <footer className={styles.footer}>
+      
+      <Image
+        className={styles.logo}
+        src="/icon/logo.png"
+        alt="Eventos Sao"
+        width={400}
+        height={400}
+      />
 
-            <Image className="w-20 ml-4" src="/icon/logo.png" alt="Logo" width={400} height={400} priority={false} />
 
-            <div className={styles.wrapper}>
-                <Image 
-                    className={styles.icon} 
-                    src="/icon/phone.png"
-                    alt="Logo" 
-                    width={400} 
-                    height={400}
-                    priority={false}
-                />
-                <p>+53 5 6789017</p>
-            </div>
+      {/* Redes sociales */}
+      <div className={styles.socialMedia}>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <Image
+            className={styles.icon}
+            src="/icon/facebook.png"
+            alt="Facebook"
+            width={400}
+            height={400}
+          />
+        </a>
 
-            <div className={styles.wrapper}>
-                <Image 
-                    className={styles.icon} 
-                    src="/icon/mail.png"
-                    alt="Logo" 
-                    width={400} 
-                    height={400}
-                    priority={false}
-                />
-                <p className={styles.text}>eo@gmail.com</p>
-            </div>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <Image
+            className={styles.icon}
+            src="/icon/instagram.png"
+            alt="Instagram"
+            width={400}
+            height={400}
+          />
+        </a>
 
-            <div className="w-full h-20 flex flex-row justify-center items-center">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                    <Image 
-                        className="w-8 mx-6" 
-                        src="/icon/mail.png"
-                        alt="Logo" 
-                        width={400} 
-                        height={400}
-                        priority={false}
-                    />
-                </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                    <Image 
-                        className="w-8 mx-6" 
-                        src="/icon/mail.png"
-                        alt="Logo" 
-                        width={400} 
-                        height={400}
-                        priority={false}
-                    />
-                </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                    <Image 
-                        className="w-8 mx-6" 
-                        src="/icon/mail.png"
-                        alt="Logo" 
-                        width={400} 
-                        height={400}
-                        priority={false}
-                    />
-                </a>
+        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+          <Image
+            className={styles.icon}
+            src="/icon/whatsapp.png"
+            alt="WhatsApp"
+            width={400}
+            height={400}
+          />
+        </a>
+      </div>
 
-            </div>
+      {/* Navegación mínima */}
+      <div className={styles.nav}>
+        <a href="#" className={styles.link}>Inicio</a>
+        <a href="#" className={styles.link}>Servicios</a>
+        <a href="#" className={styles.link}>Galería</a>
+        <a href="#" className={styles.link}>Contacto</a>
+      </div>
+      
+      {/* Copyright */}
+      <p className={styles.copy}>
+        ©2026 <span className="font-semibold text-gray-700">Eventos Sao</span> · Todos los derechos reservados
+      </p>
 
-            <p>©2026 <span className="font-semibold">Eventos Sao</span> | Todos los derechos reservados</p>
-
-        </footer>
-     );
+    </footer>
+  );
 }
 
 export default Footer;

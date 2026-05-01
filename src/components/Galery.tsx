@@ -6,6 +6,7 @@ import Image from "next/image";
 type Imagen = {
     src: string;
     titulo: string;
+    datos: string;
 };
 
 type Categoria = {
@@ -21,35 +22,35 @@ export default function Galery() {
             nombre: "hotel",
             label: "Hoteles",
             imagenes: [
-                { src: "/images/beach.jpg", titulo: "Decoración elegante" },
-                { src: "/images/beach.jpg", titulo: "Ceremonia" },
-                { src: "/images/beach.jpg", titulo: "Recepción" }
+                { src: "/images/beach.jpg", titulo: "Decoración elegante", datos: "Salon Clasico, Villa Clara" },
+                { src: "/images/beach.jpg", titulo: "Ceremonia", datos: "Salon Clasico, Villa Clara" },
+                { src: "/images/beach.jpg", titulo: "Recepción", datos: "Salon Clasico, Villa Clara" }
             ]
         },
         {
             nombre: "salon",
             label: "Salones",
             imagenes: [
-                { src: "/images/beach.jpg", titulo: "Fiesta en la playa" },
-                { src: "/images/beach.jpg", titulo: "Decoración temática" },
-                { src: "/images/beach.jpg", titulo: "Ceremonia" },
-                { src: "/images/beach.jpg", titulo: "Recepción" },
+                { src: "/images/beach.jpg", titulo: "Fiesta en la playa", datos: "Salon Clasico, Villa Clara" },
+                { src: "/images/beach.jpg", titulo: "Decoración temática", datos: "Salon Clasico, Villa Clara" },
+                { src: "/images/beach.jpg", titulo: "Ceremonia", datos: "Salon Clasico, Villa Clara" },
+                { src: "/images/beach.jpg", titulo: "Recepción", datos: "Salon Clasico, Villa Clara" },
             ]
         },
         {
             nombre: "pinca",
             label: "Fincas",
             imagenes: [
-                { src: "/images/beach.jpg", titulo: "Diversión total" },
-                { src: "/images/beach.jpg", titulo: "Colores y juegos" }
+                { src: "/images/beach.jpg", titulo: "Diversión total", datos: "Salon Clasico, Villa Clara" },
+                { src: "/images/beach.jpg", titulo: "Colores y juegos", datos: "Salon Clasico, Villa Clara" }
             ]
         },
         {
             nombre: "playa",
             label: "Playas",
             imagenes: [
-                { src: "/images/beach.jpg", titulo: "Ambiente dulce" },
-                { src: "/images/beach.jpg", titulo: "Detalles únicos" }
+                { src: "/images/beach.jpg", titulo: "Ambiente dulce", datos: "Salon Clasico, Villa Clara" },
+                { src: "/images/beach.jpg", titulo: "Detalles únicos", datos: "Salon Clasico, Villa Clara" }
             ]
         }
     ];
@@ -57,17 +58,15 @@ export default function Galery() {
     const [categoriaActiva, setCategoriaActiva] = useState<Categoria>(categorias[0]);
 
     return (
-        <section className="w-full mt-5 flex flex-col items-center bg-white text-black">
+        <section className="w-full mt-8 flex flex-col items-center bg-white text-black">
 
-            {/* TITULO */}
-            <div className="px-5 w-full flex justify-start items-center">
-                <h4 className="text-3xl font-semibold tracking-wide">Lugares para ti</h4>
+            <div className="px-5 w-full max-w-6xl flex justify-between items-end">
+                <h4 className="text-3xl md:text-4xl font-semibold tracking-wide">Lugares para ti</h4>
+                <a href="#" className="hidden md:block text-sm underline opacity-70 hover:opacity-100 transition">Explorar</a>
             </div>
 
-            {/* FILTROS */}
-            <div className="py-5 w-full px-4">
+            <div className="pb-6 pt-4 w-full max-w-6xl px-4">
 
-                {/* MOBILE */}
                 <div className="block md:hidden">
                     <select
                         value={categoriaActiva.nombre}
@@ -75,7 +74,7 @@ export default function Galery() {
                             const seleccionada = categorias.find(cat => cat.nombre === e.target.value);
                             if (seleccionada) setCategoriaActiva(seleccionada);
                         }}
-                        className="min-w-[6rem] p-1 text-xl font-semibold rounded-lg focus:outline-none"
+                        className="min-w-[6rem] p-2 text-lg font-medium border-black/10 focus:outline-none"
                     >
                         {categorias.map((cat) => (
                             <option key={cat.nombre} value={cat.nombre}>
@@ -85,16 +84,15 @@ export default function Galery() {
                     </select>
                 </div>
 
-                {/* DESKTOP */}
-                <div className="hidden md:flex flex-wrap justify-center items-start gap-4">
+                <div className="hidden md:flex flex-wrap justify-center items-center gap-3">
                     {categorias.map((cat) => (
                         <button
                             key={cat.nombre}
                             onClick={() => setCategoriaActiva(cat)}
-                            className={`px-4 py-2 rounded-full border transition ${
+                            className={`px-5 py-2 rounded-full text-sm transition ${
                                 categoriaActiva.nombre === cat.nombre
-                                    ? "bg-pink-600 text-white"
-                                    : "bg-white text-black hover:bg-pink-100"
+                                    ? "bg-black text-white"
+                                    : "bg-black/5 text-black hover:bg-black/10"
                             }`}
                         >
                             {cat.label}
@@ -103,27 +101,30 @@ export default function Galery() {
                 </div>
             </div>
 
-            {/* SLIDER */}
-            <div className="w-full pl-5 pb-10">
-                <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+            <div className="w-full max-w-6xl pl-5">
+                <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-3">
 
                     {categoriaActiva.imagenes.map((img, index) => (
-                        <div
-                            key={index}
-                            className="min-w-[250px] max-w-[250px] flex-shrink-0 snap-center"
-                        >
-                            <div className="relative w-full h-[250px] overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition">
+                        <div key={index} className="min-w-[16rem] h-[22rem] flex-shrink-0 snap-start">
+
+                            <div className="relative w-full h-full rounded-2xl overflow-hidden group cursor-pointer">
+
                                 <Image
                                     src={img.src}
                                     alt={img.titulo}
                                     fill
-                                    className="object-cover hover:scale-105 transition duration-300"
+                                    className="object-cover brightness-75 group-hover:scale-110 transition duration-500"
                                 />
+
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"/>
+
+                                <div className="absolute bottom-0 left-0 p-4 flex flex-col gap-1">
+                                    <span className="text-white text-lg font-medium">{img.titulo}</span>
+                                    <span className="text-white/70 text-sm">{img.datos}</span>
+                                </div>
+
                             </div>
 
-                            <p className="mt-3 ml-2 text-left text-md font-semibold">
-                                {img.titulo}
-                            </p>
                         </div>
                     ))}
 

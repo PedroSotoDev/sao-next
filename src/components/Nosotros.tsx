@@ -1,44 +1,54 @@
+"use client";
+
 import Image from "next/image";
 
-export default function Slider() {
+const styles = {
+  section:
+    "w-full max-w-6xl mx-auto px-6 pt-0 pb-12 flex flex-col md:flex-row items-center gap-10",
 
-    const styles={
-        container: "w-full min-h-[100vh] mt-18 flex flex-col justify-left items-center bg-white text-black",
-        tittle: "mx-6 mt-10 text-2xl text-left font-bold",
-        photos: "flex w-100 mt-8 flex-col justify-center items-center",
-    }
+  imageWrapper:
+    "w-full md:w-1/2 h-[22rem] relative rounded-2xl overflow-hidden shadow-lg",
 
-    return (
+  image:
+    "object-cover",
 
-        <section className={styles.container}>
+  content:
+    "w-full md:w-1/2 flex flex-col gap-5 text-gray-700",
 
-            <div className="flex flex-col justify-between items-start">
-                <h3 className={styles.tittle} style={{fontFamily:  "playfair"}}>
-                    Sobre Nosotros
-                </h3>
-                <p className="mx-10 mb-14 mt-10 text-xl">
-                    Contamos con un apasionado equipo de <span className="text-pink-600 font-bold ">expertos</span> y una red de proveedores de <span className="text-pink-600 font-bold ">confianza</span> para ofrecerte un servicio coordinado, con <span className="text-pink-600 font-bold ">garantia</span> y <span className="text-pink-600 font-bold">sin preocupaciones</span>.
-                </p>
-            </div>
+  title:
+    "text-3xl md:text-4xl font-semibold text-gray-800",
 
-            <Image
-                    className="w-full mb-10 object-cover brightness-90" 
-                    src="/images/port.jpg"
-                    alt="fotografia de estilo" 
-                    width={800} 
-                    height={600}
-                    priority={false}
-            />
+  text:
+    "text-xl text-base leading-relaxed",
 
-            <div className="flex flex-col justify-between items-start">
-                <h3 className={styles.tittle} style={{fontFamily:  "playfair"}}>
-                    Nuestro Lider
-                </h3>
-                <p className="mx-10 mb-14 mt-10 text-xl">
-                    Nuestro lider y fundador <span className="text-black font-semibold ">Jorge Sao</span> es reconocido chef y experto en decoración, su <span className="text-pink-600 font-bold ">doble talento</span> es nuestro sello único.
-                </p>
-            </div>
+  highlightBox:
+    "mt-4 p-5 rounded-xl bg-rose-50 border border-rose-100",
 
-        </section>
-    );
+  highlightText:
+    "text-sm md:text-base font-medium text-gray-800",
+};
+
+function Nosotros() {
+  return (
+    <section className={styles.section}>
+
+
+      {/* Contenido */}
+      <article className={styles.content}>
+        
+        <h2 className={styles.title}>
+          Sobre nosotros
+        </h2>
+
+        <p className={styles.text}>
+          En <span className="font-semibold text-gray-800">Eventos Sao</span> creemos que cada celebración debe ser única. 
+          Nuestro equipo trabaja de forma cercana contigo para entender tu idea y transformarla en una experiencia real, cuidando cada detalle con dedicación y estilo.
+        </p>
+
+      </article>
+
+    </section>
+  );
 }
+
+export default Nosotros;

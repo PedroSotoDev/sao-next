@@ -12,7 +12,7 @@ export default function MainHero() {
         <header className={styles.header}>
             
             <Image
-                    className="z-0 w-full h-full object-cover brightness-90" 
+                    className="z-0 w-full h-full object-cover brightness-90 saturate-120" 
                     src="/images/beach.jpg"
                     alt="Foto de Evento" 
                     width={800} 

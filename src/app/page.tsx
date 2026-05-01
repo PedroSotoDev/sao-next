@@ -2,6 +2,9 @@ import MainHero from "../components/MainHero"
 import About from "@/components/StepLine"
 import Footer from "@/components/Footer"
 import CardSecction from "@/components/Cards"
+import Nosotros from "@/components/Nosotros";
+import Polaroid from "@/components/Polaroid";
+import Slider from "@/components/Slider";
 
 const styles={
 	main:"h-full w-full flex flex-col items-center justify-between bg-white",
@@ -11,10 +14,12 @@ const styles={
 export default function Home() {
 	return (
 		<main className={styles.main}>
-			 <MainHero/>
-			 <CardSecction/>
-			 <About/>
-			 <Footer/>
+			<MainHero/>
+			<CardSecction/>
+			<Nosotros/>
+			<Slider/>
+			<About/>
+			<Footer/>
 		</main>
 	);
 }
