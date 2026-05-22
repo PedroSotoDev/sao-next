@@ -45,7 +45,7 @@ export default function Navbar() {
                         <a href='/infantil'>Fiesta Infantil</a>
                         <br/>
                         <a href='/servicios'>Servicios</a>
-                        <a href='/contact'>Contacto</a>  
+                        <a href='/contacto'>Contacto</a>  
                     </div>
 
                     <p className="text-sm">©2026 <span className="font-semibold">Eventos Sao</span> | Todos los derechos reservados</p>

@@ -13,7 +13,7 @@ export default function Infantil() {
             <Hero 
                 title="Fiestas Infantiles" 
                 text='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et doloribus quisquam omnis sapiente eaque labore repudiandae.' 
-                bg="/images/gacebo.jpg"
+                bg="/images/cumple_p.jpg"
             />
             <Galery/>
             <History

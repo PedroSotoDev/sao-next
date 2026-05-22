@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import servicios from "@/data/servicios"
 
 type Servicio = {
   titulo: string;
@@ -11,16 +12,7 @@ type Servicio = {
 };
 
 export default function AllServices() {
-  const services: Servicio[] = [
-    { titulo: "Decoración premium", descripcion: "Diseños elegantes", detalle: "Creamos ambientes únicos adaptados a cada pareja, cuidando cada detalle para lograr una experiencia visual inolvidable.", img: "/images/beach.jpg" },
-    { titulo: "Fotografía profesional", descripcion: "Captura cada momento", detalle: "Equipo especializado en fotografía de eventos, capturando emociones reales con estilo artístico y moderno.", img: "/images/beach.jpg" },
-    { titulo: "Catering exclusivo", descripcion: "Experiencia gastronómica", detalle: "Menús personalizados con opciones gourmet, adaptados a diferentes gustos y estilos de celebración.", img: "/images/beach.jpg" },
-    { titulo: "Iluminación LED", descripcion: "Ambiente visual moderno", detalle: "Iluminación dinámica que transforma cualquier espacio en una experiencia visual atractiva.", img: "/images/beach.jpg" },
-
-    // 👉 aquí puedes seguir agregando TODOS los servicios
-    { titulo: "DJ & Música en vivo", descripcion: "Ambiente perfecto", detalle: "Contamos con DJs profesionales y música en vivo para elevar la energía de tu evento.", img: "/images/beach.jpg" },
-    { titulo: "Coordinación de eventos", descripcion: "Todo bajo control", detalle: "Nos encargamos de la planificación y ejecución para que tú solo disfrutes.", img: "/images/beach.jpg" },
-  ];
+  const services: Servicio[] = servicios
 
   const [preview, setPreview] = useState<Servicio | null>(null);
 
@@ -61,7 +53,7 @@ export default function AllServices() {
             {/* CONTENT */}
             <div className="p-4 flex flex-col gap-1">
               <h4 className="text-base font-semibold">{srv.titulo}</h4>
-              <p className="text-sm text-black/60">{srv.descripcion}</p>
+              <p className="text-sm text-black/60" style={{ whiteSpace: 'pre-line' }}>{srv.descripcion}</p>
             </div>
 
           </div>
