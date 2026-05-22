@@ -8,24 +8,21 @@ const styles = {
 
 export default function MainHero() {
     const [index, setIndex] = useState(0)
-    const [fade, setFade] = useState(true)
-    const [currentSrc, setCurrentSrc] = useState('/images/fuente.jpg')
-    const imagenes = ['/images/fuente.jpg', '/images/bodaC.jpg', '/images/fuente.jpg', '/images/bodaC.jpg']
+    const [currentSrc, setCurrentSrc] = useState('/images/beach.jpg')
+    const imagenes = [
+        '/images/beach.jpg',
+        '/images/bodaC.jpg', 
+        '/images/beach.jpg', 
+        '/images/bodaC.jpg'
+        ]
 
     useEffect(() => {
-        const intervalo = setInterval(() => {
-            setFade(false)
-            setTimeout(() => {
-                setIndex((prev) => (prev + 1) % imagenes.length)
-                setFade(true)
-            }, 200)
-        }, 2000)
-        return () => clearInterval(intervalo)
-    }, [])
-
-    useEffect(() => {
+        setTimeout(() => {
+            setIndex((prev) => (prev + 1) % imagenes.length)
+        }, 4000)
         setCurrentSrc(imagenes[index])
     }, [index])
+
 
     return (
         <header className={styles.header}>
@@ -35,7 +32,7 @@ export default function MainHero() {
                     alt="Foto de Evento"
                     fill
                     priority={false}
-                    className={`object-cover brightness-90 saturate-120 transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
+                    className={`object-cover brightness-90 saturate-120 transition-normal duration-5000 `}
                 />
             </div>
 

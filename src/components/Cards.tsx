@@ -10,8 +10,7 @@ export default function Cards() {
                         className="z-0 object-cover" 
                         src="/images/bodaC.png"
                         alt="Foto de Evento" 
-                        width={800} 
-                        height={600}
+                        fill
                         priority={false}
                 />
 
@@ -27,10 +26,9 @@ export default function Cards() {
                 
                 <Image
                         className="z-0 object-cover brightness-90" 
-                        src="/images/quincea.jpg"
+                        src="/images/port.jpg"
                         alt="Foto de Evento" 
-                        width={800} 
-                        height={600}
+                        fill
                         priority={false}
                 />
 
@@ -46,11 +44,10 @@ export default function Cards() {
             <a href='/infantil' className="relative w-full h-40 sm:w-[48%] lg:w-[22%] sm:h-55 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition bg-cover bg-center">
                 
                 <Image
-                        className="z-0 object-center brightness-90" 
+                        className="z-0 object-cover brightness-90" 
                         src="/images/nina.jpg"
                         alt="Foto de Evento" 
-                        width={800} 
-                        height={600}
+                        fill
                         priority={false}
                 />
 
@@ -65,15 +62,14 @@ export default function Cards() {
             <a href='/infantil' className="relative w-full h-40 sm:w-[48%] lg:w-[22%] sm:h-55 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition bg-cover bg-center">
                 
                 <Image
-                        className="z-0 object-cover brightness-90" 
-                        src="/images/gala.jpg"
+                        className="z-0 object-cover" 
+                        src="/images/galaoro.jpg"
                         alt="Foto de Evento" 
-                        width={800} 
-                        height={600}
+                        fill
                         priority={false}
                 />
 
-                <div className="absolute w-full h-full px-7 py-4 flex flex-col justify-start  text-white inset-0 bg-[#0000009c]">
+                <div className="absolute w-full h-full px-7 py-4 flex flex-col justify-start  text-white inset-0 bg-[#00000081]">
                     <h3 className="text-3xl text-shadow-md font-semibold text-shadow mb-2">Galas</h3>
                     <p className="text-xl text-[rgb(255,208,230)] leading-relaxed text-shadow">| Cena de Empresa</p>
                     <p className="text-xl text-[rgb(255,208,230)] leading-relaxed text-shadow">| Ceremonias</p>

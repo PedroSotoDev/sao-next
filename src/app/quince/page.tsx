@@ -15,10 +15,8 @@ export default function Quince() {
             <Hero 
                 title="Fiestas de Quince" 
                 text='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et doloribus quisquam omnis sapiente eaque labore repudiandae.' 
-                bg="/images/quince/quince_verde2.jpg"
-                img1="/images/quince/cake_azul_vert.jpg"
-                img2="/images/quince/candy_azul.jpg"
-                img3="/images/quince/cumple.jpg"
+                bg="/images/bride.jpg"
+
             />
             <MiniServices/>
             <Galery/>
