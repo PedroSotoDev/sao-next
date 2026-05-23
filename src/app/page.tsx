@@ -17,7 +17,6 @@ export default function Home() {
 			<MainHero/>
 			<CardSecction/>
 			<Nosotros/>
-			<Slider/>
 			<About/>
 			<Footer/>
 		</main>

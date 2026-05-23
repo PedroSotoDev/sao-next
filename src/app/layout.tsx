@@ -16,9 +16,9 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
 		<body className={bodyStyles}>
 			<NavBar/>
 			
-			<button className="fixed z-100 w-14 h-14 p-1 bottom-4 right-4 text-white rounded-[5rem] bg-[#25d366]">
+			<button className="fixed z-100 w-13 h-13 p-1 bottom-4 right-4 text-white rounded-[5rem] bg-[#25d366]">
 				<Image
-					className="z-0 object-cover opacity-90 scale-75" 
+					className="z-0 object-cover opacity-90 scale-75 " 
 					src="/icon/whatsapp.png"
 					alt="Foto de Evento" 
 					width={800} 

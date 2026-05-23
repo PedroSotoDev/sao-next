@@ -1,7 +1,7 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
+import categoria from "@/data/lugares";
 
 type Imagen = {
     src: string;
@@ -17,43 +17,7 @@ type Categoria = {
 
 export default function Galery() {
 
-    const categorias: Categoria[] = [
-        {
-            nombre: "hotel",
-            label: "Hoteles",
-            imagenes: [
-                { src: "/images/beach.jpg", titulo: "Decoración elegante", datos: "Salon Clasico, Villa Clara" },
-                { src: "/images/beach.jpg", titulo: "Ceremonia", datos: "Salon Clasico, Villa Clara" },
-                { src: "/images/beach.jpg", titulo: "Recepción", datos: "Salon Clasico, Villa Clara" }
-            ]
-        },
-        {
-            nombre: "salon",
-            label: "Salones",
-            imagenes: [
-                { src: "/images/beach.jpg", titulo: "Fiesta en la playa", datos: "Salon Clasico, Villa Clara" },
-                { src: "/images/beach.jpg", titulo: "Decoración temática", datos: "Salon Clasico, Villa Clara" },
-                { src: "/images/beach.jpg", titulo: "Ceremonia", datos: "Salon Clasico, Villa Clara" },
-                { src: "/images/beach.jpg", titulo: "Recepción", datos: "Salon Clasico, Villa Clara" },
-            ]
-        },
-        {
-            nombre: "pinca",
-            label: "Fincas",
-            imagenes: [
-                { src: "/images/beach.jpg", titulo: "Diversión total", datos: "Salon Clasico, Villa Clara" },
-                { src: "/images/beach.jpg", titulo: "Colores y juegos", datos: "Salon Clasico, Villa Clara" }
-            ]
-        },
-        {
-            nombre: "playa",
-            label: "Playas",
-            imagenes: [
-                { src: "/images/beach.jpg", titulo: "Ambiente dulce", datos: "Salon Clasico, Villa Clara" },
-                { src: "/images/beach.jpg", titulo: "Detalles únicos", datos: "Salon Clasico, Villa Clara" }
-            ]
-        }
-    ];
+    const categorias: Categoria[] = categoria;
 
     const [categoriaActiva, setCategoriaActiva] = useState<Categoria>(categorias[0]);
 
@@ -76,6 +40,9 @@ export default function Galery() {
                         }}
                         className="min-w-[6rem] p-2 text-lg font-medium border-black/10 focus:outline-none"
                     >
+                        <option key='Z' value="ZZZ">
+                            Todos
+                        </option>
                         {categorias.map((cat) => (
                             <option key={cat.nombre} value={cat.nombre}>
                                 {cat.label}

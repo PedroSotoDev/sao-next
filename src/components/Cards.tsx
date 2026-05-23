@@ -52,7 +52,7 @@ export default function Cards() {
                 />
 
                 <div className="absolute w-full h-full px-7 py-4 text-white inset-0 bg-[#0000009c]">
-                    <h3 className="text-3xl font-semibold text-shadow mb-2">Infantiles</h3>
+                    <h3 className="text-3xl font-semibold text-shadow mb-2">Fiestas Infantiles</h3>
                     <p className="text-xl text-[rgb(255,208,230)] leading-relaxed text-shadow">| Baby Shower</p>
                     <p className="text-xl text-[rgb(255,208,230)] leading-relaxed text-shadow">| Gender Review</p>
                 </div>
@@ -70,9 +70,9 @@ export default function Cards() {
                 />
 
                 <div className="absolute w-full h-full px-7 py-4 flex flex-col justify-start  text-white inset-0 bg-[#00000081]">
-                    <h3 className="text-3xl text-shadow-md font-semibold text-shadow mb-2">Galas</h3>
+                    <h3 className="text-3xl text-shadow-md font-semibold text-shadow mb-2">Galas y Ceremonias</h3>
                     <p className="text-xl text-[rgb(255,208,230)] leading-relaxed text-shadow">| Cena de Empresa</p>
-                    <p className="text-xl text-[rgb(255,208,230)] leading-relaxed text-shadow">| Ceremonias</p>
+                    <p className="text-xl text-[rgb(255,208,230)] leading-relaxed text-shadow">| Graduaciones</p>
                 </div>
 
             </a>

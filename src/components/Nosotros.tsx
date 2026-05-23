@@ -1,10 +1,8 @@
-"use client";
-
-import Image from "next/image";
+import Slider from "@/components/Slider";
 
 const styles = {
   section:
-    "w-full max-w-6xl mx-auto px-6 pt-0 pb-12 flex flex-col md:flex-row items-center gap-10",
+    "w-full max-w-6xl mx-auto px-6 pt-0 pb-12 flex flex-col sm:flex-row justify-between items-start gap-10",
 
   imageWrapper:
     "w-full md:w-1/2 h-[22rem] relative rounded-2xl overflow-hidden shadow-lg",
@@ -13,7 +11,7 @@ const styles = {
     "object-cover",
 
   content:
-    "w-full md:w-1/2 flex flex-col gap-5 text-gray-700",
+    "w-full px-4 md:w-1/2 flex flex-col gap-5 text-gray-700",
 
   title:
     "text-3xl md:text-4xl font-semibold text-gray-800",
@@ -46,6 +44,8 @@ function Nosotros() {
         </p>
 
       </article>
+
+      <Slider/>
 
     </section>
   );

@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Galery from "@/components/Galery";
 import History from "@/components/History";
+import MiniServices from "@/components/MiniServices";
 
 const styles={
     main:"h-full w-full flex flex-col items-center justify-start bg-white",
@@ -13,8 +14,9 @@ export default function Infantil() {
             <Hero 
                 title="Fiestas Infantiles" 
                 text='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et doloribus quisquam omnis sapiente eaque labore repudiandae.' 
-                bg="/images/cumple_p.jpg"
+                bg="/images/nina.jpg"
             />
+            <MiniServices/>
             <Galery/>
             <History
                 title="Nuevas Sonrisas"
