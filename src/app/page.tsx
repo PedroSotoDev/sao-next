@@ -3,6 +3,7 @@ import About from "@/components/StepLine"
 import Footer from "@/components/Footer"
 import CardsMenu from "@/components/CardsMenu"
 import Nosotros from "@/components/Nosotros";
+import { DividerDiamond } from "@/components/deco/DividerDiamond";
 import Polaroid from "@/components/Polaroid";
 import Slider from "@/components/Slider";
 
@@ -16,8 +17,11 @@ export default function Home() {
 		<main className={styles.main}>
 			<MainHero/>
 			<CardsMenu/>
+			<DividerDiamond/>
 			<Nosotros/>
+			<DividerDiamond/>
 			<About/>
+			<DividerDiamond/>
 			<Footer/>
 		</main>
 	);
