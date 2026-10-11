@@ -1,7 +1,7 @@
 import MainHero from "../components/MainHero"
 import About from "@/components/StepLine"
 import Footer from "@/components/Footer"
-import CardSecction from "@/components/Cards"
+import CardsMenu from "@/components/CardsMenu"
 import Nosotros from "@/components/Nosotros";
 import Polaroid from "@/components/Polaroid";
 import Slider from "@/components/Slider";
@@ -15,7 +15,7 @@ export default function Home() {
 	return (
 		<main className={styles.main}>
 			<MainHero/>
-			<CardSecction/>
+			<CardsMenu/>
 			<Nosotros/>
 			<About/>
 			<Footer/>

@@ -1,91 +1,106 @@
-import Image from "next/image";
+"use client";
 
-const styles = {
-    container: "w-full px-6 flex flex-col sm:flex-row justify-between items-start bg-white text-black",
-    tittle: "mx-10 text-3xl text-center font-bold",
-    photos: "flex w-full mt-8 flex-col justify-center items-center",
-    text:"px-6 pt-10 text-xl text-base leading-relaxed text-gray-800",
+import Link from "next/link";
+import { MessageCircle, Calendar, Sparkles, PartyPopper } from "lucide-react";
 
-    ctaContainer: "sm:w-0 sm:invisible relative w-full h-[350px] mt-10",
-    overlay: "absolute inset-0 bg-black/50 z-10",
-    ctaContent: "absolute inset-0 z-20 flex flex-col justify-around items-center px-8 py-4",
-    ctaText: " text-[1.35rem] md:text-xl max-w-2xl leading-relaxed",
-    button: "mt-6 px-6 py-3 bg-pink-600 text-white rounded-full hover:bg-pink-700 transition"
-}
+const STEPS = [
+    {
+        icon: MessageCircle,
+        title: "Charla inicial",
+        description: "Escuchamos tu idea, expectativas y presupuesto.",
+    },
+    {
+        icon: Calendar,
+        title: "Preparativos",
+        description: "Nos reunimos para definir cada detalle del evento.",
+    },
+    {
+        icon: Sparkles,
+        title: "Ensayos y coordinación",
+        description: "Contactamos proveedores y afinamos la logística.",
+    },
+    {
+        icon: PartyPopper,
+        title: "El gran día",
+        description: "Tú disfrutas, nosotros nos encargamos del resto.",
+        highlight: true,
+    },
+];
 
-function StepLine() {
-    return ( 
-        <section className={styles.container}>
-            <div className="px-4 mb-8 flex flex-col justify-between items-start">
-                <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6 text-center">
-                    ¿Como trabajamos?
-                </h3>
-                <p className="text-gray-700 text-xl  leading-relaxed">
-                    No trabajamos con paquetes cerrados, diseñamos cada evento desde cero
-                    con los servicios que tú eliges.
-                </p>           
+export default function StepLine() {
+    return (
+        <section className="w-full bg-white py-12 sm:py-16 lg:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            {/* Encabezado */}
+            <div className="mx-auto mb-12 max-w-3xl text-center sm:mb-16">
+            <h2 className="mb-4 text-3xl font-semibold text-gray-900 sm:text-4xl lg:text-5xl">
+                ¿Cómo trabajamos?
+            </h2>
+            <p className="text-base leading-relaxed text-gray-600 sm:text-lg">
+                No trabajamos con paquetes cerrados. Diseñamos cada evento desde cero
+                con los servicios que tú eliges.
+            </p>
             </div>
 
-            <div className="w-full flex flex-col justify-around items-center">
-                <h3 className="w-65 text-2xl font-semibold text-gray-900 mb-6 text-center">Todo comienza con una conversación</h3>
-                <ol className="w-60 relative text-body border-s-8 border-pink-600">                  
-                    <li className="mb-10 ms-7">            
-                        <span className="absolute flex items-center justify-center w-7 h-7 bg-pink-600 text-pink-600 rounded-full -start-4 ring-4 ring-buffer">
-                        <p className="text-white">1</p>
-                        </span>    
-                        <h3 className="text-xl text-gray-900 font-medium leading-tight">Charla Inicial</h3>
-                        <p className="text-md text-gray-800">Escuchamos tu idea y expectativas.</p>
+            {/* Bloque "Todo comienza con una conversación" */}
+            <div className="mx-auto max-w-2xl">
+            <p className="mb-10 text-center text-xl font-semibold text-[#E11D74] sm:text-2xl">
+                Todo comienza con una conversación
+            </p>
+
+            {/* Timeline */}
+            <ol className="relative border-l-2 border-[#E11D74]/30 ml-4 space-y-8 sm:space-y-10">
+                {STEPS.map((step, i) => {
+                const Icon = step.icon;
+                const isLast = i === STEPS.length - 1;
+
+                return (
+                    <li key={step.title} className="relative pl-8 sm:pl-10">
+                    {/* Círculo numerado / icono */}
+                    <span
+                        className={`absolute -left-[18px] top-0 flex h-9 w-9 items-center justify-center rounded-full ring-4 ring-white
+                        ${isLast ? "bg-[#E11D74]" : "bg-white border-2 border-[#E11D74]"}`}
+                    >
+                        <Icon
+                        className={`h-4 w-4 ${isLast ? "text-white" : "text-[#E11D74]"}`}
+                        strokeWidth={2.2}
+                        />
+                    </span>
+
+                    {/* Contenido */}
+                    <div className={isLast ? "pt-0.5" : ""}>
+                        <h3
+                        className={`mb-1 leading-tight ${
+                            isLast
+                            ? "text-xl font-bold text-[#E11D74] sm:text-2xl"
+                            : "text-lg font-semibold text-gray-900 sm:text-xl"
+                        }`}
+                        >
+                        {step.title}
+                        </h3>
+                        <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
+                        {step.description}
+                        </p>
+                    </div>
                     </li>
-                    <li className="mb-10 ms-7">
-                        <span className="absolute flex items-center justify-center w-7 h-7  bg-pink-600  text-pink-600 rounded-full -start-4 ring-4 ring-buffer">
-                        <p className="text-white">2</p>
-                        </span>
-                        <h3 className="text-xl text-gray-900 font-medium leading-tight">Preparativos</h3>
-                        <p className="text-md text-gray-800">Nos reunimos contigo para ver los detalles.</p>
-                    </li>
-                    <li className="mb-10 ms-7">
-                        <span className="absolute flex items-center justify-center w-7 h-7  bg-pink-600  text-pink-600 rounded-full -start-4 ring-4 ring-buffer">
-                        <p className="text-white">3</p>
-                        </span>
-                        <h3 className="text-xl text-gray-900 font-medium leading-tight">Ensayos</h3>
-                        <p className="text-md text-gray-800">Coordinamos servicios y contactamos proveedores.</p>
-                    </li>
-                    <li className="ms-7">
-                        <span className="absolute flex items-center justify-center w-7 h-7  bg-pink-600  text-pink-600 rounded-full -start-4 ring-4 ring-buffer">
-                        <p className="text-white">⭐</p>
-                        </span>
-                        <h3 className="text-2xl text-gray-900 font-semibold">El Gran Dia</h3>
-                    </li>
-                </ol>
+                );
+                })}
+            </ol>
+
+            {/* CTA */}
+            <div className="mt-12 flex flex-col items-center gap-4 sm:mt-16">
+                <Link
+                href="/servicios"
+                className="inline-flex items-center justify-center rounded-full bg-[#E11D74] px-7 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#c11565] hover:shadow-md sm:text-base"
+                >
+                Ver servicios
+                </Link>
+                <p className="text-xs text-gray-500 sm:text-sm">
+                Sin compromiso · Respuesta en menos de 24h
+                </p>
             </div>
-
-            {/* <div className={styles.ctaContainer}>
-                <Image
-                    src="/images/bodag.jpg" 
-                    alt="Servicios personalizados"
-                    fill
-                    className="object-cover brightness-40 saturate-50"
-                    priority
-                />
-
-                <div className={styles.ctaContent}>
-                    <p className={styles.ctaText}>
-                        No trabajamos con paquetes cerrados, diseñamos cada evento desde cero
-                        con los servicios que tú eliges.
-                    </p>
-
-                    <a className="px-6 py-3 rounded-xl bg-rose-200 text-rose-600 font-medium tracking-wide hover:bg-rose-300 transition-all duration-300" href="servicios">
-                        Ver Servicios
-                    </a>
-                </div>
-            </div> */}
-
+            </div>
+        </div>
         </section>
-     );
+    );
 }
-
-export default StepLine;
-
-
-
-                

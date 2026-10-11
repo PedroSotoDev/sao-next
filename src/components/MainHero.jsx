@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const styles = {
-    header: "w-full h-[90vh] mt-18 relative flex flex-col items-center justify-between text-white bg-white bg-cover bg-center bg-no-repeat text-black sm:h-[90vh]",
+    header: "w-full h-[90vh] mt-16 relative flex flex-col items-center justify-between text-white bg-white bg-cover bg-center bg-no-repeat text-black sm:h-[45vh]",
 }
 
 export default function MainHero() {
@@ -38,7 +38,7 @@ export default function MainHero() {
 
             <div className="absolute inset-0 bg-[#0000009c] flex flex-col items-center justify-center">
                 <h1 className="w-full mt-4 px-4 text-[2.4rem] font-semibold text-shadow-[0rem_0rem_1rem_rgba(0,0,0,1)] sm:text-6xl" style={{ fontFamily: "playfair" }}>
-                    Organización y Decoración de <span className="text-rose-400">Eventos</span> y Bodas en Cuba
+                    <span className="text-rose-400">Organización</span> y Decoración de <span className="text-rose-400">Eventos</span> y Bodas en Cuba
                 </h1>
             </div>
         </header>

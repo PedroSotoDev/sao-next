@@ -1,54 +1,66 @@
 import Slider from "@/components/Slider";
 
 const styles = {
-  section:
-    "w-full max-w-6xl mx-auto px-6 pt-0 pb-12 flex flex-col sm:flex-row justify-between items-start gap-10",
+	section:
+		"w-full max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-12 flex flex-col md:flex-row items-center gap-8 md:gap-12",
 
-  imageWrapper:
-    "w-full md:w-1/2 h-[22rem] relative rounded-2xl overflow-hidden shadow-lg",
+	content:
+		"w-full md:w-1/2 flex flex-col gap-5 text-gray-700",
 
-  image:
-    "object-cover",
+	title:
+		"text-3xl md:text-3xl lg:text-4xl font-semibold text-gray-800",
 
-  content:
-    "w-full px-4 md:w-1/2 flex flex-col gap-5 text-gray-700",
+	text:
+		"text-base sm:text-lg leading-relaxed",
 
-  title:
-    "text-3xl md:text-4xl font-semibold text-gray-800",
-
-  text:
-    "text-xl text-base leading-relaxed",
-
-  highlightBox:
-    "mt-4 p-5 rounded-xl bg-rose-50 border border-rose-100",
-
-  highlightText:
-    "text-sm md:text-base font-medium text-gray-800",
+	sliderWrapper:
+		"w-full md:w-1/2",
 };
 
 function Nosotros() {
-  return (
-    <section className={styles.section}>
+	return (
+		<section className={styles.section}>
+			{/* Contenido — primero en móvil y desktop */}
+			<article className={styles.content}>
+				<h2 className={styles.title}>¿Quienes somos?</h2>
 
+				<p className={styles.text}>
+					<span className="font-semibold text-gray-800">Eventos Sao</span> es una casa
+					organizadora de bodas y celebraciones en Cuba. Diseñamos experiencias a la
+					medida, donde cada detalle está pensado para contar tu historia.
+				</p>
 
-      {/* Contenido */}
-      <article className={styles.content}>
-        
-        <h2 className={styles.title}>
-          Sobre nosotros
-        </h2>
+				<p className={styles.text}>
+					Porque los momentos que se recuerdan toda la vida no se improvisan:{" "}
+					<span className="font-semibold text-gray-800">se diseñan con pasión</span>.
+				</p>
+				
+				{/* Highlight destacado */}
+				<div className="mt-6 flex items-start gap-4 rounded-2xl bg-gradient-to-br from-rose-50 to-rose-100/50 border border-rose-200 p-5">
+					<div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#E11D74] text-white">
+						<span className="text-xl">✨</span>
+					</div>
+					<div>
+						<p className="text-2xl font-bold text-gray-900 leading-tight">
+						+10 años
+						</p>
+						<p className="text-sm text-gray-700 mt-0.5">
+						CREANDO MOMENTOS INOLVIDABLES
+						</p>
+					</div>
+				</div>
 
-        <p className={styles.text}>
-          En <span className="font-semibold text-gray-800">Eventos Sao</span> creemos que cada celebración debe ser única. 
-          Nuestro equipo trabaja de forma cercana contigo para entender tu idea y transformarla en una experiencia real, cuidando cada detalle con dedicación y estilo.
-        </p>
+			</article>
 
-      </article>
+			
 
-      <Slider/>
+			{/* Slider — segundo en móvil y desktop */}
+			<div className={styles.sliderWrapper}>
+				<Slider />
+			</div>
 
-    </section>
-  );
+		</section>
+	);
 }
 
 export default Nosotros;
