@@ -2,101 +2,104 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import ServiceModal, { type Servicio } from "./modales/ServiceModal";
 
-type Servicio = {
-    titulo: string;
-    descripcion: string;
-    detalle: string;
-    img: string;
-};
+const SERVICES: Servicio[] = [
+  {
+    titulo: "Decoración y ambientación",
+    descripcion: "Ambientes únicos hechos a tu medida",
+    detalle:
+      "Creamos ambientes que reflejan tu estilo, desde la mesa principal hasta el último detalle. Trabajamos con proveedores de confianza para garantizar una estética impecable.",
+    img: "/images/beach.jpg",
+  },
+  {
+    titulo: "Fotografía y video",
+    descripcion: "Momentos que duran para siempre",
+    detalle:
+      "Capturamos las emociones reales de tu evento con un estilo artístico y moderno. Entrega profesional en alta resolución, lista para atesorar.",
+    img: "/images/team.jpg",
+  },
+  {
+    titulo: "Catering y barra",
+    descripcion: "Sabores para recordar",
+    detalle:
+      "Menús personalizados con opciones gourmet, cócteles de autor y atención impecable. Adaptamos cada propuesta a tus gustos y presupuesto.",
+    img: "/images/gacebo.jpg",
+  },
+  {
+    titulo: "Iluminación y sonido",
+    descripcion: "El ambiente perfecto para tu celebración",
+    detalle:
+      "Diseño de iluminación profesional y audio de alta calidad para crear la atmósfera exacta que imaginas. De lo íntimo a lo espectacular.",
+    img: "/images/galaoro.jpg",
+  },
+];
 
 export default function MiniServices() {
+  const [preview, setPreview] = useState<Servicio | null>(null);
 
-    const services: Servicio[] = [
-        { titulo: "Decoración premium", descripcion: "Diseños elegantes", detalle: "Creamos ambientes únicos adaptados a cada pareja, cuidando cada detalle para lograr una experiencia visual inolvidable.", img: "/images/beach.jpg" },
-        { titulo: "Fotografía profesional", descripcion: "Captura cada momento", detalle: "Equipo especializado en fotografía de eventos, capturando emociones reales con estilo artístico y moderno.", img: "/images/beach.jpg" },
-        { titulo: "Catering exclusivo", descripcion: "Experiencia gastronómica", detalle: "Menús personalizados con opciones gourmet, adaptados a diferentes gustos y estilos de celebración.", img: "/images/beach.jpg" },
-        { titulo: "Iluminación LED", descripcion: "Ambiente visual moderno", detalle: "Iluminación dinámica que transforma cualquier espacio en una experiencia visual atractiva.", img: "/images/beach.jpg" },
-    ];
+  return (
+    <section className="mx-auto w-full max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+      {/* Header */}
+      <div className="mb-8 sm:mb-10">
+        <h2 className="text-3xl font-semibold text-gray-900 sm:text-4xl">
+          Nuestros servicios
+        </h2>
+        <p className="mt-2 max-w-2xl text-base text-gray-600 sm:text-lg">
+          Todo lo que necesitas para un evento inolvidable, en un solo lugar.
+        </p>
+      </div>
 
-    const [preview, setPreview] = useState<Servicio | null>(null);
-
-    return (
-        <section className="w-full  mx-auto px-4 flex flex-col gap-6 text-black">
-
-            <h3 className="text-3xl md:text-4xl font-semibold tracking-wide">
-                Servicios
-            </h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-
-                {services.map((srv, i) => (
-                    <div
-                        key={i}
-                        onClick={() => setPreview(srv)}
-                        className="flex gap-3 items-center bg-black/10 hover:bg-black/15 transition rounded-xl p-3 cursor-pointer"
-                    >
-
-                        <div className="w-14 h-14 relative flex-shrink-0 rounded-lg overflow-hidden">
-                            <Image
-                                src={srv.img}
-                                alt={srv.titulo}
-                                fill
-                                sizes="(max-width: 640px) 100vw, 50vw"
-                                quality={40}
-                                className="object-cover"
-                            />
-                        </div>
-
-                        <div className="flex flex-col">
-                            <span className="text-sm font-semibold">{srv.titulo}</span>
-                            <span className="text-xs text-black/60">{srv.descripcion}</span>
-                        </div>
-
-                    </div>
-                ))}
-
+      {/* Grid de cards */}
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
+        {SERVICES.map((srv) => (
+          <button
+            key={srv.titulo}
+            type="button"
+            onClick={() => setPreview(srv)}
+            className="group flex items-center gap-4 rounded-2xl border border-gray-100 bg-white p-3 text-left shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#E11D74]/30 hover:shadow-md sm:p-4"
+          >
+            {/* Imagen */}
+            <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl sm:h-20 sm:w-20">
+              <Image
+                src={srv.img}
+                alt={srv.titulo}
+                fill
+                sizes="80px"
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
             </div>
 
-            {preview && (
-                <div onClick={() => setPreview(null)} className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
-
-                    <div onClick={(e) => e.stopPropagation()} className="relative w-full max-w-md h-[65vh] rounded-2xl overflow-hidden">
-
-                        <Image
-                            src={preview.img}
-                            alt={preview.titulo}
-                            fill
-                            sizes="(max-width: 768px) 100vw, 500px"
-                            quality={80}
-                            className="object-cover"
-                        />
-
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"/>
-
-                        <button
-                            onClick={() => setPreview(null)}
-                            className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center rounded-full bg-black/50 backdrop-blur text-white text-lg hover:bg-black/70 transition"
-                        >
-                            ×
-                        </button>
-
-                        <div className="absolute bottom-0 left-0 p-5 flex flex-col gap-2">
-                            <h4 className="text-white text-xl font-semibold">{preview.titulo}</h4>
-                            <p className="text-white/80 text-sm leading-relaxed">{preview.detalle}</p>
-                        </div>
-
-                    </div>
-
-                </div>
-            )}
-
-            <div className="w-full flex justify-center mt-4"> 
-                <a className="px-6 py-3 rounded-xl bg-rose-200 text-rose-600 font-medium tracking-wide hover:bg-rose-300 transition-all duration-300" href="servicios">
-                    Más Servicios
-                </a>
+            {/* Texto */}
+            <div className="min-w-0 flex-1">
+              <h3 className="text-base font-semibold text-gray-900 transition-colors group-hover:text-[#E11D74] sm:text-lg">
+                {srv.titulo}
+              </h3>
+              <p className="mt-0.5 line-clamp-2 text-sm text-gray-500">
+                {srv.descripcion}
+              </p>
             </div>
 
-        </section>
-    );
+            {/* Flecha */}
+            <ArrowRight className="h-5 w-5 shrink-0 text-gray-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#E11D74]" />
+          </button>
+        ))}
+      </div>
+
+      {/* CTA */}
+      <div className="mt-8 flex justify-center sm:mt-10">
+        <Link
+          href="/servicios"
+          className="inline-flex items-center justify-center rounded-full bg-[#E11D74] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#c11565] hover:shadow-md sm:text-base"
+        >
+          Ver todos los servicios
+        </Link>
+      </div>
+
+      {/* Modal */}
+      <ServiceModal service={preview} onClose={() => setPreview(null)} />
+    </section>
+  );
 }

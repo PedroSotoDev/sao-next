@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import MainServices from "@/components/MainServices"
+import AllServices from "@/components/AllServices"
 
 const styles={
     main:"h-full w-full flex flex-col items-center justify-start bg-white",
@@ -9,7 +9,7 @@ const styles={
 export default function Quince() {
     return (
         <main className={styles.main}>
-            <MainServices/>
+            <AllServices/>
 
         </main>
     );
