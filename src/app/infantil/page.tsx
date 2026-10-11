@@ -13,7 +13,7 @@ export default function Infantil() {
         <main className={styles.main}>
             <Hero 
                 title="Fiestas Infantiles" 
-                text='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et doloribus quisquam omnis sapiente eaque labore repudiandae.' 
+                text='Organizamos cumpleaños temáticos, baby showers y celebraciones familiares con la decoración, el entretenimiento y el catering que los más pequeños adoran. Tú solo apareces y sonríes.' 
                 bg="/images/nina.jpg"
             />
             <MiniServices/>

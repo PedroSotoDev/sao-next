@@ -75,8 +75,7 @@ export default function NavBar() {
                     ))}
                 </ul>
 
-                {/* CTA (visible en todas las pantallas) */}
-                <Link
+                {/* <Link
                 href="/contacto"
                 className="inline-flex shrink-0 items-center justify-center rounded-full bg-[#E11D74] 
                             px-3 py-2 text-xs font-semibold text-white shadow-sm transition-all 
@@ -85,7 +84,7 @@ export default function NavBar() {
                 >
                 <span className="sm:inline">Planea tu evento</span>
 
-                </Link>
+                </Link> */}
             </nav>
         </header>
 

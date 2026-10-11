@@ -1,9 +1,9 @@
 import MainHero from "../components/MainHero"
 import About from "@/components/StepLine"
 import Footer from "@/components/Footer"
+import { DividerDiamond } from "@/components/deco/DividerDiamond";
 import CardsMenu from "@/components/CardsMenu"
 import Nosotros from "@/components/Nosotros";
-import { DividerDiamond } from "@/components/deco/DividerDiamond";
 import Polaroid from "@/components/Polaroid";
 import Slider from "@/components/Slider";
 

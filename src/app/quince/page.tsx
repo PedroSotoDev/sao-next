@@ -14,7 +14,7 @@ export default function Quince() {
         <main className={styles.main}>
             <Hero 
                 title="Fiestas de Quince" 
-                text='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et doloribus quisquam omnis sapiente eaque labore repudiandae.' 
+                text='Creamos una celebración que refleja su personalidad, su estilo y sus sueños. Decoración, música, fotografía y cada detalle pensado para que ella lo recuerde toda la vida.' 
                 bg="/images/port.jpg"
 
             />
