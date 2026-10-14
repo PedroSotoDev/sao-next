@@ -14,9 +14,6 @@ export default function Boda() {
                             title="Planes de Boda" 
                             text='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et doloribus quisquam omnis sapiente eaque labore repudiandae.' 
                             bg="/images/bodaj.jpg"
-                            img1="/images/quince/cake_azul_vert.jpg"
-                            img2="/images/quince/candy_azul.jpg"
-                            img3="/images/quince/cumple.jpg"
                         />
             <Contacto/>
             <Footer/>
