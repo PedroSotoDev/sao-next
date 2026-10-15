@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, Mail, Phone, MapPin } from "lucide-react";
+import { getImagePath } from "@/lib/image-path";
 
 const NAV_LINKS = [
 	{ href: "/", label: "Inicio" },
@@ -32,7 +33,7 @@ function Footer() {
 					{/* Columna 1: Logo + descripción */}
 					<div className="flex flex-col items-center gap-4 sm:col-span-2 lg:col-span-1">
 						<Image
-							src="/icon/logo.png"
+							src={getImagePath("/icon/logo.png")}
 							alt="Eventos Sao"
 							width={160}
 							height={60}
@@ -51,7 +52,7 @@ function Footer() {
 									className="group flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-gray-100 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#E11D74] hover:ring-[#E11D74]"
 								>
 									<Image
-									src={icon}
+									src={getImagePath(icon)}
 									alt=""
 									width={40}
 									height={40}

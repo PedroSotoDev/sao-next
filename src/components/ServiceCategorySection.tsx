@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Plus, Minus } from "lucide-react";
 import type { Categoria, Servicio } from "@/data/servicios";
+import { getImagePath } from "@/lib/image-path";
 
 type Props = {
     categoria: Categoria;
@@ -70,7 +71,7 @@ export default function ServiceCategorySection({categoria,servicios,onSelect,ope
                     className="group/card relative h-40 w-full overflow-hidden rounded-2xl text-left shadow-md ring-1 ring-gray-100 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:ring-[#E11D74]/30 sm:h-44"
                     >
                         <Image
-                            src={srv.img}
+                            src={getImagePath(srv.img)}
                             alt={srv.titulo}
                             fill
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

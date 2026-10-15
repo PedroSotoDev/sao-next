@@ -5,6 +5,7 @@ import ServiceModal from "./modales/ServiceModal";
 import ServiceCategorySection from "./ServiceCategorySection";
 import servicios, { CATEGORIAS, type Categoria, type Servicio } from "@/data/servicios";
 
+
 export default function AllServices() {
 	const [preview, setPreview] = useState<Servicio | null>(null);
 

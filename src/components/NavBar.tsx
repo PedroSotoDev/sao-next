@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { getImagePath } from "@/lib/image-path";
 
 const NAV_LINKS = [
     { href: "/", label: "Inicio" },
@@ -49,7 +50,7 @@ export default function NavBar() {
 
                     <Link href="/" className="flex items-center" aria-label="Ir al inicio">
                         <Image
-                            src="/icon/logo.png"
+                            src={getImagePath("/icon/logo.png")}
                             alt="Eventos Sao"
                             width={160}
                             height={60}
@@ -109,7 +110,7 @@ export default function NavBar() {
             {/* Header del panel */}
             <div className="flex h-16 items-center justify-between border-b border-neutral-100 px-4">
                 <Image
-                src="/icon/logo.png"
+                src={getImagePath("/icon/logo.png")}
                 alt="Eventos Sao"
                 width={120}
                 height={45}

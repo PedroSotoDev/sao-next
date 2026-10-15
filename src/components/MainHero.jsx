@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { getImagePath } from "@/lib/image-path";
 
 const styles = {
     header: "w-full h-[90vh] mt-16 relative flex flex-col items-center justify-between text-white bg-white bg-cover bg-center bg-no-repeat text-black sm:h-[45vh]",
@@ -28,7 +29,7 @@ export default function MainHero() {
         <header className={styles.header}>
             <div className="absolute inset-0">
                 <Image
-                    src={currentSrc}
+                    src={getImagePath(currentSrc)}
                     alt="Foto de Evento"
                     fill
                     priority={false}

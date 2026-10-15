@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Calendar } from "lucide-react";
+import { getImagePath } from "@/lib/image-path";
 
 interface HistoryProps {
     title: string;
@@ -18,7 +19,7 @@ export default function History({title,text,img,categoria = "Boda",fecha,href = 
                 {/* Imagen */}
                 <div className="group relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-lg lg:aspect-[5/4]">
                     <Image
-                        src={img}
+                        src={getImagePath(img)}
                         alt={title}
                         fill
                         sizes="(max-width: 1024px) 100vw, 50vw"

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { getImagePath } from "@/lib/image-path";
 
 type Props = {
 	href: string;
@@ -17,7 +18,7 @@ export default function Card({ href, image, title, subtitle, tags }: Props) {
 		className="group relative block h-56 w-full overflow-hidden rounded-2xl shadow-md transition-shadow duration-300 hover:shadow-xl sm:h-80 lg:h-80"
 		>
 			<Image
-				src={image}
+				src={getImagePath(image)}
 				alt={title}
 				fill
 				sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"

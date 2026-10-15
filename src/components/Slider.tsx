@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { getImagePath } from "@/lib/image-path";
 
 const IMAGES = [
     { src: "/images/team.jpg", alt: "Equipo de Eventos Sao" },
@@ -66,9 +67,9 @@ export default function Slider() {
             style={{ transform: `translateX(-${index * 100}%)` }}
         >
             {IMAGES.map((img, i) => (
-            <div key={img.src} className="relative min-w-full h-full">
+            <div key={img.alt} className="relative min-w-full h-full">
                 <Image
-                src={img.src}
+                src={getImagePath(img.src)}
                 alt={img.alt}
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"

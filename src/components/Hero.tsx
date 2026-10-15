@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import { getImagePath } from "@/lib/image-path";
+
 
 interface HeroProps {
     title: string;
@@ -16,7 +18,7 @@ export default function Hero({title,text,bg,eyebrow = "Eventos Sao · Bodas y ce
         <section className="relative flex min-h-[85vh] w-full items-center justify-center overflow-hidden sm:min-h-[90vh]">
         {/* Imagen de fondo */}
         <Image
-            src={bg}
+            src={getImagePath(bg)}
             alt={title}
             fill
             priority

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import ServiceModal from "./modales/ServiceModal";
 import servicios, { type Servicio } from "@/data/servicios";
+import { getImagePath } from "@/lib/image-path";
 
 // Filtra los destacados y limita a 4 máximo
 const SERVICIOS_DESTACADOS = servicios.filter((s) => s.destacado).slice(0, 4);
@@ -37,7 +38,7 @@ export default function MiniServices() {
 				{/* Imagen */}
 				<div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl sm:h-20 sm:w-20">
 				<Image
-					src={srv.img}
+					src={getImagePath(srv.img)}
 					alt={srv.titulo}
 					fill
 					sizes="80px"

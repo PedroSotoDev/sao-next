@@ -2,6 +2,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import categoria from "@/data/lugares";
+import { getImagePath } from "@/lib/image-path";
+
 
 type Imagen = {
     src: string;
@@ -77,7 +79,7 @@ export default function Galery() {
                             <div className="relative w-full h-full rounded-2xl overflow-hidden group cursor-pointer">
 
                                 <Image
-                                    src={img.src}
+                                    src={getImagePath(img.src)}
                                     alt={img.titulo}
                                     fill
                                     className="object-cover brightness-75 group-hover:scale-110 transition duration-500"

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getImagePath } from "@/lib/image-path";
 
 
 interface polaroidProps{
