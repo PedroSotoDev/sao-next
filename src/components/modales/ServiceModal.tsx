@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import { X, Check } from "lucide-react";
 import type { Servicio } from "@/data/servicios";
+import { getImagePath } from "@/lib/image-path";
 
 type Props = {
     service: Servicio | null;
@@ -39,7 +40,7 @@ export default function ServiceModal({ service, onClose }: Props) {
           {/* Imagen superior */}
           <div className="relative h-56 w-full sm:h-64">
             <Image
-              src={service.img}
+              src={getImagePath(service.img)}
               alt={service.titulo}
               fill
               sizes="(max-width: 768px) 100vw, 512px"

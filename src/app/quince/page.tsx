@@ -23,7 +23,7 @@ export default function Quince() {
             <History
                 title="Quince Primaveras"
                 text="Desde el primer momento todo fue mágico. La decoración, la atención al detalle y la organización hicieron de nuestro día algo perfecto. Sin duda volveríamos a confiar."
-                img="/images/gacebo.jpg"
+                img="/images/gacebo.png"
             />
             <Footer/>
         </main>

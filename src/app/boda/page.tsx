@@ -16,7 +16,7 @@ export default function Boda() {
 			<Hero 
 				title="Planes de Boda" 
 				text='Diseñamos bodas únicas desde cero, con la estética, los proveedores y el ritmo que tú elijas. Tú disfrutas cada momento, nosotros nos ocupamos del resto.' 
-				bg="/images/boda_p.png"
+				bg="/images/gacebo.png"
 
 			/>
 			<MiniServices/>
@@ -24,7 +24,7 @@ export default function Boda() {
 			<History
 				title="La Boda del Siglo"
 				text="Desde el primer momento todo fue mágico. La decoración, la atención al detalle y la organización hicieron de nuestro día algo perfecto. Sin duda volveríamos a confiar."
-				img="/images/gacebo.jpg"
+				img="/images/gacebo.png"
 			/>
 
 			<DividerDiamond/>

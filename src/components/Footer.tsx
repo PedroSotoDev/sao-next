@@ -13,14 +13,14 @@ const NAV_LINKS = [
 const SOCIAL_LINKS = [
 	{href: "https://facebook.com/eventossao",label: "Facebook",icon: "/icon/facebook.png",},
 	{href: "https://instagram.com/eventossao",label: "Instagram",icon: "/icon/instagram.png",},
-	{href: "https://wa.me/5355555555",label: "WhatsApp",icon: "/icon/whatsapp.png",},
+	{href: "https://wa.me/+5353053026",label: "WhatsApp",icon: "/icon/whatsapp.png",},
 ];
 
 const CONTACT = {
-	phone: "+53 5555 5555",
-	phoneHref: "tel:+5355555555",
-	email: "hola@eventossao.com",
-	emailHref: "mailto:hola@eventossao.com",
+	phone: "+53 5 3053026",
+	phoneHref: "tel:+5353053026",
+	email: "eventossao@gmail.com",
+	emailHref: "mailto:eventossao@gmail.com",
 	location: "La Habana, Cuba",
 };
 

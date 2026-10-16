@@ -20,7 +20,7 @@ export default function Slider() {
                             href="tel:+5359014403"
                             className="text-lg font-semibold text-pink-700 hover:underline"
                         >
-                            +53 5 9014403
+                            +53 5 3053026
                         </a>
                     </div>
 
@@ -30,7 +30,7 @@ export default function Slider() {
                             href="mailto:pasoto.dev@gmail.com"
                             className="text-lg font-semibold text-pink-700 hover:underline"
                         >
-                            pasoto.dev@gmail.com
+                            eventossao@gmail.com
                         </a>
                     </div>
 

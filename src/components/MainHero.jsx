@@ -12,9 +12,9 @@ export default function MainHero() {
     const [currentSrc, setCurrentSrc] = useState('/images/beach.jpg')
     const imagenes = [
         '/images/beach.jpg',
-        '/images/bodaC.jpg', 
-        '/images/beach.jpg', 
-        '/images/bodaC.jpg'
+        '/images/bodac.jpg', 
+        '/images/fuente.jpg', 
+        '/images/pastel.jpg',
         ]
 
     useEffect(() => {

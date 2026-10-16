@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { MessageCircle, X, Send } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5355555555"; // sin +, sin espacios
+const WHATSAPP_NUMBER = "+5353053026"; // sin +, sin espacios
 
 export default function WaButton() {
 

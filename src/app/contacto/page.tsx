@@ -10,11 +10,6 @@ const styles={
 export default function Boda() {
     return (
         <main className={styles.main}>
-            <Hero 
-                            title="Planes de Boda" 
-                            text='Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et doloribus quisquam omnis sapiente eaque labore repudiandae.' 
-                            bg="/images/bodaj.jpg"
-                        />
             <Contacto/>
             <Footer/>
         </main>
