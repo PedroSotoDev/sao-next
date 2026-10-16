@@ -25,7 +25,7 @@ const servicios: Servicio[] = [
         detalle:
         "Transformamos cada espacio con una estética pensada para tu estilo. Desde la mesa principal hasta el último rincón, cuidamos la armonía visual para que todo se vea impecable y hable de ti.",
         beneficios: ["Diseño personalizado", "Montaje completo", "Coordinación con proveedores"],
-        img: "/images/servicios/decoracion.jpg",
+        img: "/images/servicios/decoration.jpg",
         destacado: true,
     },
     {
@@ -36,7 +36,7 @@ const servicios: Servicio[] = [
         detalle:
         "Diseño de iluminación profesional y sonido de alta calidad que transforman cualquier espacio. Creamos la atmósfera exacta que imaginas: íntima, elegante o espectacular.",
         beneficios: ["Iluminación LED", "Audio profesional", "Diseño a medida"],
-        img: "/images/servicios/iluminacion.jpg",
+        img: "/images/servicios/ilumination.jpg",
     },
     {
         slug: "papeleria",
@@ -184,7 +184,7 @@ const servicios: Servicio[] = [
         detalle:
         "Fotógrafos especializados en eventos sociales, capturando emociones reales con estilo artístico y moderno. Entrega en alta resolución, lista para atesorar.",
         beneficios: ["Cobertura completa", "Edición profesional", "Entrega digital en alta resolución"],
-        img: "/images/servicios/fotografia.jpg",
+        img: "/images/servicios/estilista.jpg",
         destacado: true,
     },
 ];
