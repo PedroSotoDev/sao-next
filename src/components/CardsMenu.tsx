@@ -3,7 +3,7 @@ import CategoryCard from "./Card";
 const CATEGORIES = [
   {
     href: "/boda",
-    image: "/images/bodaC.png",
+    image: "/images/gacebo.png",
     title: "Planes de Boda",
     subtitle: "Bodas",
     tags: ["Bodas", "Aniversarios"],
